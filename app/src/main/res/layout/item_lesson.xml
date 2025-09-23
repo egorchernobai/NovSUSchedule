@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lesson_card_background">
+
+    <!-- Верхняя строка: Предмет -->
+    <TextView
+        android:id="@+id/subject"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Предмет"
+        android:textColor="#212121"/>
+
+    <!-- Нижняя строка: Время - Тип - Преподаватель - Кабинет -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:weightSum="4">
+
+
+
+        <TextView
+            android:id="@+id/teacher"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Преподаватель"
+            android:textColor="#424242"/>
+
+        <TextView
+            android:id="@+id/room"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:textColor="#424242"
+            android:text="Кабинет"
+            android:textStyle="bold"
+            android:layout_width="match_parent"/>
+        <TextView
+            android:id="@+id/time"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Время"
+            android:textColor="#424242"/>
+        <TextView
+            android:id="@+id/type"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="комментарий"
+            android:textColor="#616161"/>
+    </LinearLayout>
+</LinearLayout>
