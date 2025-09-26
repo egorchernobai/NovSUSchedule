@@ -19,4 +19,7 @@ class DaysPagerAdapter(
     }
 
     fun getDayTitle(position: Int): String = days[position]
+    fun getDayTitles(): List<String> = days
+
 }
+
