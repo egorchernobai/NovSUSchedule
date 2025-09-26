@@ -7,6 +7,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.coroutines.launch
+import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +28,13 @@ class MainActivity : AppCompatActivity() {
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->
                 tab.text = adapter.getDayTitle(position)
             }.attach()
+
+            // --- Select tab by day ---
+            val calendar = Calendar.getInstance()
+            val index = calendar.get(Calendar.DAY_OF_WEEK) - 2 // 1 = Sunday ... 7 = Saturday
+            if (index >= 0) {
+                viewPager.setCurrentItem(index, false)
+            }
         }
     }
 }
